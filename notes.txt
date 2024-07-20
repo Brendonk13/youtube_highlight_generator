@@ -1,0 +1,13 @@
+
+Next:
+    - add fake hook to get data
+    - get it to show videos
+    - get additional buffer of videos
+    - add clerk
+    
+Design:
+    - when creating clips:
+        show each one vertically in order
+
+    - Download:
+        - just generate a bash script to download the videos at the timestamp with youtubedl and ffmpgeg
