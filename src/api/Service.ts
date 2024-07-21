@@ -2,7 +2,7 @@ import axios, { AxiosError, type AxiosRequestConfig, type AxiosResponse } from '
 import _ from 'lodash'
 import { type AnyObject } from '@/types/common'
 
-import getCookie from '@/utils/getCookie'
+// import getCookie from '@/utils/getCookie'
 
 enum StatusCode {
   Unauthorized = 401,
@@ -58,21 +58,21 @@ const instance = axios.create({
   },
 })
 
-// middleware to add the clerk bearer token to request
-instance.interceptors.request.use(
-  (config) => {
-    const token = getCookie('__session')
-    if (token){
-      config.headers.Authorization = `Bearer ${token}`
-    } else {
-      config.headers.Authorization = undefined
-    }
-    return config
-  },
-  (err) => {
-    return Promise.reject(err)
-  },
-)
+// // middleware to add the clerk bearer token to request
+// instance.interceptors.request.use(
+//   (config) => {
+//     const token = getCookie('__session')
+//     if (token){
+//       config.headers.Authorization = `Bearer ${token}`
+//     } else {
+//       config.headers.Authorization = undefined
+//     }
+//     return config
+//   },
+//   (err) => {
+//     return Promise.reject(err)
+//   },
+// )
 
 
 // https://dev.to/giovanniantonaccio/configuring-a-camelcase-to-snakecase-parser-with-axios-bld
