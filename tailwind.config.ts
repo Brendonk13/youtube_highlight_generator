@@ -3,7 +3,7 @@ import colors from 'tailwindcss/colors'
 
 const config = {
   content: [
-    './src/**/*.{html,js}', // Adjust these paths according to your project structure
+    './src/**/*.{html,js,ts,tsx}', // Adjust these paths according to your project structure
     './public/index.html',
   ],
   theme: {

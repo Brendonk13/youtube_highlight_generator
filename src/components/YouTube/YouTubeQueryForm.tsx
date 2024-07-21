@@ -10,6 +10,7 @@ interface YoutubeQueryFormProps {
   // youtubeQuery: string
   setQueryAnswer: React.Dispatch<React.SetStateAction<PostYoutubeQueryResponse[]>>
   currentAnswers: PostYoutubeQueryResponse[]
+  // setVideoStates
 }
 
 export default function YoutubeQueryForm({setQueryAnswer, currentAnswers} : YoutubeQueryFormProps){
@@ -23,7 +24,7 @@ export default function YoutubeQueryForm({setQueryAnswer, currentAnswers} : Yout
   })
 
   const {
-    control,
+    // control,
     handleSubmit,
     formState: { errors, },
     // setValue,
