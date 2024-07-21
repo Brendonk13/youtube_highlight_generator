@@ -1,6 +1,7 @@
 import { useState, useCallback } from 'react'
 import YoutubeQueryForm from '@/components/YouTube/YouTubeQueryForm'
 import YoutubePlayer from '@/components/YouTube/YoutubePlayer'
+import Card from '@/components/common/Card'
 import { defaultYoutubeAnswer, PostYoutubeQueryResponse } from '@/types/common'
 
 
@@ -26,16 +27,19 @@ export default function CombineClipsPage(){
 
   return (
     <div>
-      <YoutubeQueryForm currentAnswers={videoStates} setQueryAnswer={setVideoStates} />
       {videoStates.map(videoState =>
-        <YoutubePlayer
-          key={videoState.videoId}
-          videoId={videoState.videoId}
-          inputStartTime={videoState.startTime}
-          inputEndTime={videoState.endTime}
-          setStartTime={(newStartTime: number) => setStartTime(videoState.videoId, newStartTime)}
-          setEndTime={(newEndTime: number) => setEndTime(videoState.videoId, newEndTime)}
-        />
+        <Card>
+          <YoutubeQueryForm currentAnswers={videoStates} setQueryAnswer={setVideoStates} />
+          <br />
+          <YoutubePlayer
+            key={videoState.videoId}
+            videoId={videoState.videoId}
+            inputStartTime={videoState.startTime}
+            inputEndTime={videoState.endTime}
+            setStartTime={(newStartTime: number) => setStartTime(videoState.videoId, newStartTime)}
+            setEndTime={(newEndTime: number) => setEndTime(videoState.videoId, newEndTime)}
+          />
+        </Card>
       )}
     </div>
   )
