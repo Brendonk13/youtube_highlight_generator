@@ -1,12 +1,7 @@
 
 Next:
-    - fix api to work with snackbar
-    - make one add video button which has the query
-    the video classes shown in a list get start,end, videoId
-    - do i need a snackbar for this ?? -- just nice for failures
-    - test snackbar
-    - get it to show videos
-    - get additional buffer of videos
+    - fix snackbar
+    - can I extract the start and end times of the videos??
     - add clerk
     
 Design:
